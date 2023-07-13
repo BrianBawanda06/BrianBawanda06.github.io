@@ -802,4 +802,8 @@ footer .center a i{
         height: 300px;
         width: calc((100% / 4) - 0px);
     }
+    .home-kontak{
+        padding: 10rem 20rem 10rem 20rem;
+    
+    }
 }
