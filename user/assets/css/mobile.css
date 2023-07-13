@@ -107,6 +107,7 @@
     }
     nav .menu .list-menu .link-menu{
         color: var(--text-putih);
+        font-size: 16px;
      
     }
     nav .menu .list-menu.active::before{
@@ -182,8 +183,39 @@
     /* ================ MAIN CONTENT ================== */
     /* home agenda dan pengumuman */
     .agenda-pengumuman{
-        grid-template-columns: 62% 35%;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
     }
+    .agenda-pengumuman .pengumuman{
+        border: none;
+    }
+    .agenda-pengumuman .pengumuman .list-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+        height: max-content;
+    }
+    .agenda-pengumuman .pengumuman .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 20px;
+        padding-bottom: 5px;
+    }
+    .agenda-pengumuman .pengumuman .title a{
+        text-transform: capitalize;
+        font-size: 14px;
+        color: var(--text-putih-alt);
+        font-weight: 500;
+        text-shadow: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .agenda-pengumuman .semua-pengumuman{
+        display: none;
+    }
+
 
     /* home galeri */
     .home-galeri .galeri-wrapper .carousel img{
@@ -223,6 +255,33 @@
      .home-galeri .galeri-wrapper .carousel img{
         width: calc((100% / 1) - 0px);
     }
+
+    /* Agenda dan pengumuman */
+    .agenda-pengumuman .pengumuman .list-wrapper{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px;
+    }
+    .agenda-pengumuman .list-agenda{
+        height: max-content;
+        align-items: center;
+    }
+    .agenda-pengumuman .list-agenda .left  p{
+        font-size: 12px;
+        margin-top: 2px;
+    }
+    .agenda-pengumuman .list-agenda .right{
+        padding-top: 2px;
+    }
+    .agenda-pengumuman .list-agenda .right .judul-kegiatan{
+        font-size: 16px;
+        max-height: 60px;
+        overflow: hidden;
+    }
+    .agenda-pengumuman .list-agenda .right .detail .jam{
+        display: none;
+    }
+
 
     /* home kontak */
     .home-kontak{

@@ -10,7 +10,7 @@
     --tombol-hover :#2c6b38 ;
     --card : #FFFFFF;
     --text-putih : #FFFFFF;
-    --text-putih-alt :rgb(165, 165, 165);
+    --text-putih-alt :#FFF;
     --text : #151515;
     --text-alt : #6b6b6b;
     --text-warna : #7AA874;
@@ -176,7 +176,7 @@ nav .menu .list-menu ul li:hover a{
 /* Banner */
 .banner-wrapper{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -338,11 +338,11 @@ nav .menu .list-menu ul li:hover a{
 .main-content{
     width: 100%;
     min-height: 100vh;
-    transform: translateY(-70px);
+    /* transform: translateY(-70px); */
     position: relative;
     z-index: 99;
-    padding-top: 100px;
-    padding: 4rem  4rem 2rem 4rem;
+    padding: 8rem  4rem 2rem 4rem;
+    margin-top: 20px;
 }
 
 .section-title{
@@ -359,7 +359,7 @@ nav .menu .list-menu ul li:hover a{
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    min-height: 45vh;
+    min-height: max-content;
     margin-bottom: 80px;
 }
 
@@ -434,6 +434,9 @@ nav .menu .list-menu ul li:hover a{
     position: absolute;
     bottom: 0;
 }
+
+/* agenda dan pengumuman */
+
 .agenda-pengumuman{
     display: grid;
     grid-template-columns: 71% 25%;
@@ -444,7 +447,7 @@ nav .menu .list-menu ul li:hover a{
     min-height: 50vh;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 .agenda-pengumuman .pengumuman{
     border: 1px solid rgb(219, 219, 219);
@@ -472,10 +475,9 @@ nav .menu .list-menu ul li:hover a{
     grid-template-columns: repeat(1,1fr);
     grid-gap: 10px;
 }
-.agenda-pengumuman .list-agenda{
-    width: 100%;
-    height: 100px;
-    background-color: rgb(219, 219, 219);
+.agenda-pengumuman .pengumuman .list-wrapper{
+    height: calc(195px *  3);
+    overflow: hidden;
 }
 .agenda-pengumuman .list-pengumuman{
     height:195px;
@@ -492,8 +494,101 @@ nav .menu .list-menu ul li:hover a{
     margin-top: 10px;
     border-radius: 3px;
 }
+.agenda-pengumuman .pengumuman .title a{
+    display: none;
+}
 
+/* agenda */
+.agenda .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.agenda .title a{
+    text-transform: capitalize;
+    font-size: 14px;
+    color: var(--text-putih-alt);
+    font-weight: 500;
+    text-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.agenda .title a i{
+    transform: translateY(1px);
+}
+.agenda .title a:hover{
+    color: var(--utama);
+}
+.agenda-pengumuman .list-wrapper{
+    gap: 10px;
+}
+.agenda-pengumuman .list-agenda{
+    width: 100%;
+    height: 83px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.agenda-pengumuman .list-agenda:hover{
+    background-color:#d6ebd4;
+    cursor: pointer;
 
+}
+.agenda-pengumuman .list-agenda .left{
+    position: relative;
+    width: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3px;
+}
+.agenda-pengumuman .list-agenda .left .icon-kalender{
+    font-size: 60px;
+    color: var(--kedua);
+}
+.agenda-pengumuman .list-agenda .left h2{
+    position: absolute;
+    bottom: 25px;
+    color: var(--text-putih);
+    line-height: 1;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 30px;
+}
+
+.agenda-pengumuman .list-agenda .left  p{
+    font-size: 13px;
+    margin-top: 2px;
+}
+.agenda-pengumuman .list-agenda .right{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.agenda-pengumuman .list-agenda .right .judul-kegiatan{
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+}
+.agenda-pengumuman .list-agenda .right .detail{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* position: absolute;
+    bottom: 10px; */
+    font-size: 13px;
+    margin-top: 5px;
+    color: var(--text-alt);
+}
 /* ====================== HOME GALERI ================== */
 .home-galeri{
     width: 100%;
@@ -686,8 +781,11 @@ nav .menu .list-menu ul li:hover a{
     font-weight: 600;
     letter-spacing: 2px;
     box-shadow: 0 0 20px #17923050;
+    cursor: pointer;
 }
-
+.home-kontak .home-form form button:hover{
+    background-color: var(--kedua);
+}
 /* ============= FOOTER =================== */
 footer{
     width: 100%;
@@ -763,7 +861,7 @@ footer .center a i{
 
 
 /* DESKTOP BESAR */
-@media screen and (min-width : 1400px){
+@media screen and (min-width : 1640px){
     nav{
         padding: 0 20rem;
     }
