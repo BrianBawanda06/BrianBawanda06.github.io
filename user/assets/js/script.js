@@ -44,14 +44,14 @@ $(document).ready(function() {
   $('.struktur-org-content').hide();
   $('.visimisi-content').show();
   $('#profil-tupoksi').click(function(){
-    $('.tupoksi-content').slideDown();
+    $('.tupoksi-content').show();
     $('.visimisi-content').hide();
     $('.kebijakan-content').hide();
     $('.struktur-org-content').hide();
   });
 
   $('#profil-visimisi').click(function(){
-    $('.visimisi-content').slideDown();
+    $('.visimisi-content').show();
     $('.tupoksi-content').hide();
     $('.kebijakan-content').hide();
     $('.struktur-org-content').hide();
@@ -59,14 +59,14 @@ $(document).ready(function() {
   $('#profil-kebijakan').click(function(){
     $('.visimisi-content').hide();
     $('.tupoksi-content').hide();
-    $('.kebijakan-content').slideDown();
+    $('.kebijakan-content').show();
     $('.struktur-org-content').hide();
   });
   $('#profil-struktur').click(function(){
     $('.visimisi-content').hide();
     $('.tupoksi-content').hide();
     $('.kebijakan-content').hide();
-    $('.struktur-org-content').slideDown();
+    $('.struktur-org-content').show();
   });
 
     // Cek URL saat halaman dimuat
