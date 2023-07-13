@@ -262,7 +262,50 @@
     footer .top-footer .center{
         display: none;
     }
- 
+
+
+
+    /* ====================== HALAMAN VISI & MISI ===================*/
+    .profil-container{
+        flex-direction: column;
+        padding: 1rem 4rem 4rem 4rem;
+        margin-top: 30px;
+        gap: 30px;
+    }
+    .profil-container .side-menu{
+        flex-direction:row;
+        gap: 0px;
+        width: 100%;
+        white-space: nowrap;
+        height: max-content;
+        position: sticky;
+        top: 60px;
+        background-color: var(--body);
+        padding: 1rem 0;
+        z-index: 99;
+        justify-content: center;
+    }
+    .profil-container .side-menu a{
+        padding: 5px 15px;
+        border-bottom: none;
+        color: rgb(173, 173, 173);
+        font-size: 12px;
+        border: none !important;
+        font-family: "Poppins";
+        background: none;
+    
+    }
+    .profil-container .side-menu a.active{
+        color: var(--text-putih);
+        background-color: var(--utama);
+        font-weight: 600;
+        border-radius: 20px;
+    }
+    .profil-container .profil-content-wrapper{
+        width: 100%;
+        padding-right: 0px;
+    }
+   
 }
 
 @media screen and (max-width : 550px) {
@@ -354,6 +397,18 @@
     footer .bottom-footer{
         font-size: 10px;
     }
+
+
+        /* ====================== HALAMAN VISI & MISI ===================*/
+        .profil-container{
+            padding: 2rem 1.5rem;
+        }
+        .visimisi-content .title{
+            font-size: 14px;
+        }
+        .visimisi-content .text{
+            font-size: 12px;
+        }
 }
 @media screen and (max-width : 350px) {
     .wave-hero{

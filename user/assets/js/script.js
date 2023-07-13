@@ -30,7 +30,80 @@ $(document).ready(function() {
     }
   });
 
+
+  
+// =================== HALAMAN PROFIL ===============
+
+  $(".profil-sub-menu").click(function() {
+    $(".profil-sub-menu").removeClass('active')
+    $(this).addClass('active');
+  });
+
+  $('.tupoksi-content').hide();
+  $('.kebijakan-content').hide();
+  $('.struktur-org-content').hide();
+  $('.visimisi-content').show();
+  $('#profil-tupoksi').click(function(){
+    $('.tupoksi-content').slideDown();
+    $('.visimisi-content').hide();
+    $('.kebijakan-content').hide();
+    $('.struktur-org-content').hide();
+  });
+
+  $('#profil-visimisi').click(function(){
+    $('.visimisi-content').slideDown();
+    $('.tupoksi-content').hide();
+    $('.kebijakan-content').hide();
+    $('.struktur-org-content').hide();
+  });
+  $('#profil-kebijakan').click(function(){
+    $('.visimisi-content').hide();
+    $('.tupoksi-content').hide();
+    $('.kebijakan-content').slideDown();
+    $('.struktur-org-content').hide();
+  });
+  $('#profil-struktur').click(function(){
+    $('.visimisi-content').hide();
+    $('.tupoksi-content').hide();
+    $('.kebijakan-content').hide();
+    $('.struktur-org-content').slideDown();
+  });
+
+    // Cek URL saat halaman dimuat
+    var url = window.location.href;
+    var targetUrl1 = '/user/page/profil.html#tupoksi';
+    var targetUrl2 = '/user/page/profil.html#kebijakan';
+    var targetUrl3 = '/user/page/profil.html#struktur-organisasi';
+  
+    if (url.indexOf(targetUrl1) > -1) {
+      $('.tupoksi-content').show();
+      $('.visimisi-content').hide();
+      $('.kebijakan-content').hide();
+      $('.struktur-org-content').hide();
+      $(".profil-sub-menu").removeClass('active')
+      $('#profil-tupoksi').addClass('active')
+    }else if(url.indexOf(targetUrl2) > -1){
+      $('.tupoksi-content').hide();
+      $('.visimisi-content').hide();
+      $('.kebijakan-content').show();
+      $('.struktur-org-content').hide();
+      $(".profil-sub-menu").removeClass('active')
+      $('#profil-kebijakan').addClass('active')
+    }else if(url.indexOf(targetUrl3) > -1){
+      $('.tupoksi-content').hide();
+      $('.visimisi-content').hide();
+      $('.kebijakan-content').hide();
+      $('.struktur-org-content').show();
+      $(".profil-sub-menu").removeClass('active')
+      $('#profil-struktur').addClass('active')
+    }
+
 });
+
+
+
+
+
 
 // Vanila Javascript
 window.addEventListener('scroll', function() {
@@ -117,3 +190,6 @@ carousel.addEventListener('touchmove', dragging);
 
 carousel.addEventListener('mouseup', dragStop);
 carousel.addEventListener('touchend', dragStop);
+
+
+

@@ -173,6 +173,24 @@ nav .menu .list-menu ul li a{
 nav .menu .list-menu ul li:hover a{
     color: var(--text-putih);
 }
+
+/* navbar page lain selain home */
+.page-lain nav{
+    background-color: var(--utama);
+}
+.page-lain nav .menu .list-menu .link-menu{
+    color: rgb(214, 214, 214);
+}
+.page-lain nav .menu .list-menu.active .link-menu{
+    color:#FFF !important;
+}
+.page-lain  nav .menu .list-menu.active::before{
+    background-color: #FFF;
+}
+.page-lain  nav .menu .list-menu ul{
+    box-shadow: 0px 2px 15px rgba(0,0,0,.1);
+}
+
 /* Banner */
 .banner-wrapper{
     width: 100%;
@@ -902,6 +920,93 @@ footer .bottom-footer{
 }
 
 
+/* ============================= HALAMAN VISI & MISI ======================= */
+.profil-container{
+    width: 100%;
+    height: max-content;
+    margin-top: 80px;
+    display: flex;
+    gap: 50px;
+    padding: 3rem 4rem;
+}
+.profil-container .side-menu{
+    display: flex;
+    flex-direction:column;
+    gap: 2px;
+    width: 250px;
+
+    height: max-content;
+}
+.profil-container .side-menu a{
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(228, 228, 228) !important;
+    color: rgb(173, 173, 173);
+    font-size: 14px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+.profil-container .side-menu a.active{
+    color: var(--utama);
+    font-weight: 600;
+}
+
+.profil-container .profil-content-wrapper{
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-right: 20px;
+}
+.profil-container .profil-content-wrapper .profil-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.profil-content-wrapper .visi , .profil-content-wrapper .misi, .profil-content-wrapper .tupoksi {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    line-height: 1.5;
+}
+
+.profil-content-wrapper .title{
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.profil-content-wrapper .text{
+    color: #777777;
+    font-size: 14px;
+    text-align: justify;
+}
+.profil-content-wrapper .ada-list ul{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.profil-content-wrapper .ada-list ul li{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.profil-content-wrapper .ada-list ul li .no{
+    width: 25px;
+    height: 25px;
+    background-color: var(--utama);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--text-putih);
+    transform: translateY(2px);
+    font-size: 14px;
+}
+.profil-content-wrapper .ada-list ul li .text{
+    width: 100%;
+}
 
 /* DESKTOP BESAR */
 @media screen and (min-width : 1640px){
@@ -946,5 +1051,11 @@ footer .bottom-footer{
     .home-kontak{
         padding: 10rem 20rem 10rem 20rem;
     
+    }
+
+
+    /* ============= HALAMAN VISI & MISI ========== */
+    .profil-container{
+        padding: 3rem 20rem;
     }
 }
